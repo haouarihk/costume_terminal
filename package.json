@@ -1,0 +1,18 @@
+{
+  "name": "proxyterminal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.8.20",
+    "iohook": "^0.6.6",
+    "keypress": "^0.2.1",
+    "node-blessed": "^0.3.2"
+  }
+}
