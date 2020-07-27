@@ -64,7 +64,7 @@ class Console {
             this.update()
         });
         ioHook.start();
-
+        this.subber = true
     }
     update() {
 
@@ -107,7 +107,8 @@ class Console {
     }
 
     getTypingLine() {
-        return `>${this.getTypelineContent()}`
+        let reterner = `${this.getTypelineContent()}`
+        return `>${reterner.substring(0, this.typeLine.on) + this.keyer() + reterner.substring(this.typeLine.on + 1, reterner.length - 1)}`
     }
     getTypelineContent() {
         if (this.scroll == 0) {
@@ -116,6 +117,10 @@ class Console {
             return `${this.commands[this.scroll + 1]}`
         }
 
+    }
+    keyer() {
+        this.subber = !this.subber;
+        return this.subber ? "|" : " "
     }
 
 }
